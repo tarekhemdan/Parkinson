@@ -1,0 +1,1166 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>Orange Report</title>
+
+    <style>
+    html, body, table {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        margin:0px;
+        padding:0;
+        border:0 none;
+    }
+
+    h1, h2 , h3, h4, h5 {
+       padding: 1px;
+       font-size:100%;
+    }
+
+    h1 {
+        color: white;
+        background-color: black;
+        padding: 4px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        border-bottom: 1px solid black;
+        padding-left: 2px;
+    }
+
+    ul, table, p {
+        padding: 10px;
+    }
+
+    table {
+        margin-left: -6px;
+    }
+
+    span.timestamp {
+        position: absolute;
+        right: 40px;
+        color:#ddd;
+    }
+
+    div.selected, div.normal {
+        margin: 5px;
+    }
+
+    div.selected {
+        background: #ddd;
+    }
+    @media print{
+        div.selected {
+            background: inherit;
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+    }
+
+    div.content {
+        margin-left: 15px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 2px 6px 2px 6px;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    @media screen {
+        td, th {
+            white-space: nowrap;
+        }
+    }
+
+    .caption {
+        text-align: center;
+        font-size: 90%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        max-height: 20cm;
+    }
+
+    span.legend-square {
+        width: 1em;
+        height: 1em;
+        margin-right: 6px;
+        display: inline-block;
+    }
+
+    span.legend-item {
+        margin-right: 24px;
+    }
+
+    textarea {
+        border: 1px solid silver;
+        font-style: italic;
+        width: 100%;
+        height: 4em;
+    }
+
+    .textwrapper {
+        padding: 15px;
+    }
+
+    div.normal textarea:invalid {
+        display: none;
+    }
+
+    div.selected textarea {
+        display: block;
+    }
+
+    @media print{
+        section.section, img {
+            page-break-inside: avoid;
+        }
+    }
+    </style>
+    <script>
+    function scrollToId(id) {
+        var sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.scrollIntoView();
+            return true;
+        }
+        return false;
+    };
+
+    function setSelectedId(id) {
+        var sel_el = document.getElementsByClassName('selected')[0];
+        if (sel_el != undefined && sel_el.id != id) {
+           sel_el.className = 'normal';
+        }
+        sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.className = 'selected';
+            return true;
+        }
+        return false;
+    };
+    </script>
+
+</head><body onload="(function (id) {     setSelectedId(id); scrollToId(id); }(&quot;1808880476816&quot;));">
+
+ 
+
+<div id="1808820321536" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Correlations <span class="timestamp">Thu Jan 16 25, 00:34:02</span></h1><div class="content">
+<h2>Pearson correlation</h2><table>
+<tbody><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">1</th>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">+0.831</td>
+<td style="color:#ffffff; background:#0078d7; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:#ffffff; background:#0078d7; text-align:center; vertical-align:middle;">:</td>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">2</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.801</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">3</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.669</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">4</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.631</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">5</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.593</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">6</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.593</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">HNR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">7</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.587</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">8</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.578</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">9</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.547</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">spread1</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">10</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.514</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">11</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.498</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">RPDE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">12</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.487</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">13</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.484</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">14</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.483</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">15</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.480</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">16</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.441</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">17</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.429</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">18</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.429</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">19</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.414</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">20</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.406</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">21</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.405</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">22</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.399</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">23</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.399</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">24</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.387</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">25</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.367</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">26</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.360</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">RPDE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">27</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.350</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">28</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.347</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">29</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.342</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">30</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.341</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">31</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.334</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">32</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.332</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">33</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.331</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">34</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.330</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">35</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.330</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">36</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.306</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">37</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.305</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">38</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.291</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">39</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.283</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:DDA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">40</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.251</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">41</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.250</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">42</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.249</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">43</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.246</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">44</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.246</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:APQ</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">45</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.231</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">46</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.221</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">47</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.217</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">48</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.209</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Flo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">49</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.206</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ3</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">50</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.204</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">51</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.202</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">52</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.200</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">53</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.196</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">54</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.192</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">55</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.188</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">56</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.182</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">57</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.181</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">58</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.180</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">59</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.179</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">60</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.178</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">61</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.175</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">62</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.172</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">63</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.172</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">64</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.170</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">65</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.170</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">66</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.166</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ3</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">67</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.164</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:DDA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">68</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.158</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">69</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.156</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:APQ5</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">70</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.151</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">71</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.150</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">72</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.145</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">73</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.144</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Jitter:DDP</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">74</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.142</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">75</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.142</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">RPDE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">76</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.140</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">77</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.140</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">78</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.138</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:APQ</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">79</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.138</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ3</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">80</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.138</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">81</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.134</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:APQ5</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">82</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.133</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">83</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.126</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Jitter:DDP</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">84</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.121</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Jitter:DDP</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">85</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.115</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">86</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.113</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Jitter:DDP</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">87</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.107</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:APQ3</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">88</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.106</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">89</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.105</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">90</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.101</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Flo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">91</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.100</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ3</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">92</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.098</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Jitter:DDP</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">93</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.096</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ3</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">94</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.093</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">95</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.092</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Jitter:DDP</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">96</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.090</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">97</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.087</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Flo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">98</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.086</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:APQ3</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">99</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.084</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:RAP</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">100</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.083</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th></th><td colspan="4"><b>+ 131 more</b></td></tr>
+            </tbody></table></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div><div id="1808880476816" class="selected" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Correlations <span class="timestamp">Thu Jan 16 25, 00:36:51</span></h1><div class="content">
+<h2>Pearson correlation</h2><table>
+<tbody><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">1</th>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">+0.831</td>
+<td style="color:#ffffff; background:#0078d7; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:#ffffff; background:#0078d7; text-align:center; vertical-align:middle;">:</td>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">2</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.801</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">3</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.669</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">4</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.631</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">5</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.593</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">6</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.593</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">HNR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">7</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.587</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">8</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.578</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">9</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.547</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">spread1</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">10</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.514</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">11</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.498</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">RPDE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">12</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.487</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">13</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.484</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">14</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.483</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">15</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.480</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">16</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.441</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">17</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.429</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">18</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.429</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">19</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.414</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">20</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.406</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">21</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.405</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">22</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.399</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">23</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.399</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">24</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.387</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">25</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.367</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">26</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.360</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">RPDE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">27</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.350</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">28</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.347</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">29</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.342</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">30</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.341</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">31</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.334</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">32</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.332</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">33</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.331</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">34</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.330</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">35</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.330</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">36</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.306</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">37</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.305</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">38</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.291</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">39</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.283</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:DDA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">40</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.251</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">41</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.250</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">42</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.249</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">43</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.246</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">44</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.246</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:APQ</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">45</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.231</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">46</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.221</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">47</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.217</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">48</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.209</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Flo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">49</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.206</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ3</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">50</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.204</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">51</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.202</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">52</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.200</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">53</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.196</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">54</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.192</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">55</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.188</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">56</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.182</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">57</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.181</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">58</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.180</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">59</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.179</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">60</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.178</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">61</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.175</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">62</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.172</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">63</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.172</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">DFA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">64</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.170</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">65</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.170</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">66</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.166</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ3</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">67</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.164</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:DDA</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">68</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.158</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">69</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.156</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:APQ5</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">70</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.151</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">71</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.150</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">72</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.145</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">73</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.144</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">HNR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Jitter:DDP</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">74</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.142</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">75</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.142</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">RPDE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">76</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.140</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">77</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.140</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">78</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.138</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:APQ</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">79</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.138</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ3</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">80</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.138</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">NHR</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">81</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.134</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:APQ5</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">82</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.133</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Shimmer</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PPE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">83</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.126</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Jitter:DDP</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">84</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.121</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Jitter:DDP</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">85</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.115</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Flo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">86</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.113</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Jitter:DDP</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">87</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.107</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:APQ3</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:DDA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">88</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.106</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RPDE</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">89</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.105</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:APQ</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">90</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.101</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Flo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">91</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.100</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">PPE</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ3</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">92</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.098</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Jitter:DDP</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">93</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.096</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ3</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">94</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.093</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Shimmer:APQ5</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">95</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.092</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">D2</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Jitter:DDP</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">96</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.090</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">NHR</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">97</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.087</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fhi(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Flo(Hz)</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">98</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.086</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">Shimmer:APQ3</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">spread1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">99</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.084</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:RAP</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">100</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.083</td>
+<td style="color:black; background:transparent; text-align:right; vertical-align:middle;">MDVP:Fo(Hz)</td>
+<td style="color:black; background:transparent; text-align:center; vertical-align:middle;">:</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">MDVP:Shimmer(dB)</td>
+</tr><tr><th></th><td colspan="4"><b>+ 131 more</b></td></tr>
+            </tbody></table></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div></body></html>
