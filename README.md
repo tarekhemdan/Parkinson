@@ -1,4 +1,4 @@
-# PSO-Based Neural Network Training for Classification
+# PSO-Based Neural Network Training for Parkinson Classification
 
 This repository implements a neural network for binary classification using Particle Swarm Optimization (PSO) for training. The project leverages deep learning techniques along with various preprocessing and evaluation methods to handle imbalanced datasets and achieve robust classification performance.
 
@@ -87,5 +87,3 @@ Calculation of training time.
 Model Evaluation:
 After training, the model's performance is evaluated on both training and testing data using various metrics, and ROC curves are plotted.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
